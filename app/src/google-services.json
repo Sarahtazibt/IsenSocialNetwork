@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "25953451594",
+    "project_id": "isensocialnetwork-1b95f",
+    "storage_bucket": "isensocialnetwork-1b95f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25953451594:android:25e8dd15b0ec138bea30b3",
+        "android_client_info": {
+          "package_name": "fr.isen.tazibt.isensocialnetwork"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25953451594-1ppqcrtusqbhfl6fp6skla96v8srn376.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK0OQfd38S11QVgTY_Kfi4crlA4ihvvgw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25953451594-1ppqcrtusqbhfl6fp6skla96v8srn376.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
