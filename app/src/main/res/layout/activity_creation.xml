@@ -8,7 +8,78 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/PseudoName"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Pseudo" />
+
+        <EditText
+            android:id="@+id/adresse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/PseudoName"
+            android:layout_marginTop="22dp"
+            android:background="#fff"
+            android:hint="Adresse"
+            android:inputType="textEmailAddress"
+            android:padding="23dp"
+            android:textColor="#000"
+            android:textColorHint="#4C2E2E" />
+
+        <EditText
+            android:id="@+id/FirstPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adresse"
+            android:layout_marginTop="22dp"
+            android:background="#fff"
+            android:hint="Password"
+            android:padding="22dp"
+            android:textColor="#000"
+            android:textColorHint="#4C2E2E"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/FirstPassword"
+            android:layout_marginTop="200dp"
+            android:background="#fff"
+            android:hint="Button"
+            android:padding="22dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/FirstPassword"
+            android:layout_marginTop="300dp"
+            android:background="#fff"
+            android:hint="Button"
+            android:padding="22dp" />
+
+        <EditText
+            android:id="@+id/SecondPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/FirstPassword"
+            android:layout_marginTop="22dp"
+            android:background="#fff"
+            android:hint="Confirmation Password"
+            android:inputType="textPassword"
+            android:padding="22dp"
+            android:textColor="#000"
+            android:textColorHint="#4C2E2E" />
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
