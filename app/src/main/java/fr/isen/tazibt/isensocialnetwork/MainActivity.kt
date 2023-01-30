@@ -2,6 +2,7 @@ package fr.isen.tazibt.isensocialnetwork
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
@@ -11,5 +12,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         // Write a message to the database
         Firebase.database.getReference("message").setValue("Hello, World!")
+    }
+
+    fun connect(view:View){
+        var con = textView.text.toString.toInt();
+
+        textView.text = con.toString
     }
 }
