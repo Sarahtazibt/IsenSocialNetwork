@@ -4,57 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_launcher_background"
+    android:background="@drawable/voiture_home"
     tools:context=".Connexion_Activity">
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:background="#251C1C"
-        android:backgroundTint="#1E1111"
-        android:text="LOGIN"
-        android:textColorHint="#1E1C1C"
-        app:iconTint="#8A2C2C"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="420dp"
+        android:layout_height="60dp"
+        android:background="#9E000000"
         android:ems="10"
+        android:hint="Mail ou Nom d'utilisateur"
         android:inputType="textEmailAddress"
+        android:textColor="#ECF9FF"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.365" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="420dp"
+        android:layout_height="60dp"
+        android:background="#9E000000"
         android:ems="10"
+        android:hint="Mot de Passe"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        android:textColor="#FFC107"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="398dp" />
+        tools:layout_editor_absoluteY="247dp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#552929"
-        android:fontFamily="sans-serif"
-        android:text="Connexion"
+        android:background="#9D520F"
+        android:backgroundTint="#A85C18"
+        android:fontFamily="@font/londrina_shadow"
+        android:text="INSTA DRIVE"
+        android:textColor="#FFFFFF"
         android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="136dp" />
+        tools:layout_editor_absoluteY="89dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#FBF9F9"
+        android:text="LOGIN"
+        android:textColor="#FF9800"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
