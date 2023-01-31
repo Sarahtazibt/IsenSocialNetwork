@@ -11,8 +11,8 @@
 
     <View
         android:id="@+id/view"
-        android:layout_width="177dp"
-        android:layout_height="253dp"
+        android:layout_width="184dp"
+        android:layout_height="255dp"
         android:layout_marginStart="117dp"
         android:layout_marginTop="187dp"
         android:layout_marginEnd="117dp"
@@ -23,16 +23,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="175dp"
-        android:layout_height="141dp"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:foregroundGravity="center"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.887"
         app:srcCompat="@drawable/instakar__2_" />
 
     <EditText
