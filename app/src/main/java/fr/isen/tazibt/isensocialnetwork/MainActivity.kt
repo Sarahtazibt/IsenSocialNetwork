@@ -13,4 +13,6 @@ class MainActivity : AppCompatActivity() {
         // Write a message to the database
         Firebase.database.getReference("message").setValue("Hello, World!")
     }
+
+
 }
