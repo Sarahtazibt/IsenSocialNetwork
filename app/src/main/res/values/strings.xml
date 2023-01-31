@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">IsenSocialNetwork</string>
+    <string name="DescriptMenu">Descript</string>
+    <string name="CommentMenu">Comment</string>
+
+    <string name="Comment">Commenter</string>
+
+    <string-array name="Commenter">
+        <item>commentaire1</item>
+        <item>commentaire2</item>
+        <item>commentaire3</item>
+    </string-array>
+
+
 </resources>
