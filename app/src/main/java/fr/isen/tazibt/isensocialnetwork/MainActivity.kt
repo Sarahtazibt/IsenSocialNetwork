@@ -5,46 +5,63 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.ValueEventListener
+import android.widget.Toast
+import com.google.firebase.database.*
 import com.google.firebase.database.ktx.database
 import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.gms.ads.mediation.Adapter
+import fr.isen.tazibt.isensocialnetwork.PostAdapter
+import fr.isen.tazibt.isensocialnetwork.Post
+import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
+    lateinit var mDataBase: DatabaseReference
+    private lateinit var postList:ArrayList<Post>
+    private lateinit var mAdapter:PostAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        // Write a message to the database
-        Firebase.database.getReference("message").setValue("Hello, World!")
+        /**initialized*/
+        postList = ArrayList()
+        mAdapter = PostAdapter(this,postList)
+        recyclerPosts.layoutManager = LinearLayoutManager(this)
+        recyclerPosts.setHasFixedSize(true)
+        // recyclerPosts.adapter = mAdapter
+        /**getData firebase*/
+        getPosts()
+
+    }
+    /**ok now create new activity*/
 
 
-        val database = Firebase.database
-        val myRef = database.getReference("posts")
+    private fun getPosts() {
 
-// Read from the database
-      myRef.addValueEventListener(object : ValueEventListener {
-
+        mDataBase = FirebaseDatabase.getInstance().getReference("Posts")
+        mDataBase.addValueEventListener(object :ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                //on recupere chaque toto
-                val value = snapshot.children.map {
-                    it.getValue<Post>()
-
-
+                if (snapshot.exists()){
+                    for (postSnapshot in snapshot.children){
+                        val post = postSnapshot.getValue(Post::class.java)
+                        postList.add(post!!)
+                    }
+                    recyclerPosts.adapter = mAdapter
                 }
-                Log.d(ContentValues.TAG, "Value is: " + value)
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Log.w(ContentValues.TAG, "Failed to read value.", error.toException())
+                Toast.makeText(this@MainActivity,
+                    error.message, Toast.LENGTH_SHORT).show()
             }
 
+        })
 
-          })
+
     }
+
+
 
 
 }

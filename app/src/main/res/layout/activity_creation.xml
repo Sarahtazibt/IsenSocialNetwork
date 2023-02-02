@@ -9,138 +9,95 @@
 
     tools:context=".CreationActivity">
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="184dp"
-        android:layout_height="255dp"
-        android:layout_marginStart="117dp"
-        android:layout_marginTop="187dp"
-        android:layout_marginEnd="117dp"
-        android:layout_marginBottom="291dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
     <ImageView
         android:id="@+id/logo"
         android:layout_width="125dp"
         android:layout_height="125dp"
+        android:layout_marginTop="32dp"
         android:foregroundGravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.887"
         app:srcCompat="@drawable/instakar__2_" />
 
-    <EditText
-        android:id="@+id/Pseudo"
-        android:layout_width="177dp"
-        android:layout_height="33dp"
-        android:background="#A6F8933B"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/emailEt"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:background="#A91B1006"
         android:ems="10"
-        android:hint="Pseudo"
-        android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toTopOf="@+id/EmailAddress"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        tools:layout_editor_absoluteX="118dp" />
-
-    <EditText
-        android:id="@+id/EmailAddress"
-        android:layout_width="177dp"
-        android:layout_height="33dp"
-        android:layout_marginBottom="12dp"
-        android:background="#A6F8933B"
-        android:ems="10"
-        android:hint="pseudo@gmail.com"
+        android:hint="  Entrer un email"
         android:inputType="textEmailAddress"
         android:textColor="#FFFFFF"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
-        tools:layout_editor_absoluteX="119dp" />
+        android:textColorHint="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
 
-    <EditText
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="177dp"
-        android:layout_height="33dp"
-        android:background="#A6F8933B"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/passEt"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/emailEt"
+        android:layout_marginTop="32dp"
+        android:background="#A91B1006"
         android:ems="10"
+        android:hint="  Entrer un mot de passe"
         android:inputType="textPassword"
-        android:layout_below="@id/EmailAddress"
-        android:hint="Password"
         android:textColor="#FFFFFF"
-        android:textSize="10sp"
-        tools:layout_editor_absoluteX="119dp"
-        tools:layout_editor_absoluteY="290dp" />
+        android:textColorHint="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailEt" />
 
-      <EditText
-        android:id="@+id/editTextTextPassword2"
-        android:layout_width="177dp"
-        android:layout_height="33dp"
-        android:background="#54F8933B"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/confirmPassEt"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:background="#A91B1006"
         android:ems="10"
+        android:hint="  Confirmer le mot de passe"
         android:inputType="textPassword"
-          android:hint="Confirme password"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
-        app:layout_constraintVertical_bias="0.166"
-        tools:layout_editor_absoluteX="116dp" />
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passEt" />
 
-    <Button
-        android:id="@+id/login"
-        android:layout_width="73dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="12dp"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="135dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
         android:shadowColor="#A6F8933B"
-        android:text="Login"
+        android:text="inscription"
         android:textColor="#A6F8933B"
         android:textColorLink="#A6F8933B"
-        android:textSize="12sp"
-        app:backgroundTint="#EDFFFFFF"
-        app:layout_constraintEnd_toEndOf="@+id/logo"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="@+id/logo"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2"
+        android:textSize="14sp"
+        app:backgroundTint="#E9000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPassEt"
         app:strokeColor="#A6F8933B" />
 
     <TextView
-        android:id="@+id/Createacount"
-        android:layout_width="76dp"
-        android:layout_height="14dp"
-        android:layout_marginTop="1dp"
+        android:id="@+id/connect"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
         android:gravity="center"
-        android:text="Create acount?"
+        android:text="Se connecter ?"
         android:textColor="#FFFFFF"
-        android:textSize="7sp"
+        android:textSize="14sp"
         android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword2"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword2"
-        app:layout_constraintTop_toBottomOf="@+id/login" />
-
-    <TextView
-        android:id="@+id/Help"
-        android:layout_width="76dp"
-        android:layout_height="14dp"
-        android:layout_marginTop="172dp"
-        android:gravity="center"
-        android:text="Help?"
-        android:textColor="#FFFFFF"
-        android:textSize="8sp"
-        android:textStyle="bold"
-
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Createacount"
-        app:layout_constraintVertical_bias="0.135" />
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

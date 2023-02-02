@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "895849988555",
+    "firebase_url": "https://isensocialnetwork23-7b675-default-rtdb.firebaseio.com",
+    "project_id": "isensocialnetwork23-7b675",
+    "storage_bucket": "isensocialnetwork23-7b675.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895849988555:android:b32c0bcfd0cb34d868f64e",
+        "android_client_info": {
+          "package_name": "fr.isen.lopez.isensocialnetwork23"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "895849988555-1qtd49h98v3133jtvrracqqov6n6fm6s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2RyivTXKG_UELktnhU8iZe87CiA0wW78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "895849988555-1qtd49h98v3133jtvrracqqov6n6fm6s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895849988555:android:45521ec52d6dec1768f64e",
+        "android_client_info": {
+          "package_name": "fr.isen.tazibt.isensocialnetwork"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "895849988555-1qtd49h98v3133jtvrracqqov6n6fm6s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2RyivTXKG_UELktnhU8iZe87CiA0wW78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "895849988555-1qtd49h98v3133jtvrracqqov6n6fm6s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
