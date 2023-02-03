@@ -1,10 +1,12 @@
 package fr.isen.tazibt.isensocialnetwork
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
+import com.google.firebase.database.ktx.getValue
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -17,7 +19,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         /**initialized*/
         postList = ArrayList()
-        mAdapter = PostAdapter(this,postList)
+        mAdapter = PostAdapter(postList) {
+            val intent = Intent(this, DetailActivity::class.java)
+            intent.putExtra("post", it)
+            startActivity(intent)
+        }
         recyclerPosts.layoutManager = LinearLayoutManager(this)
         recyclerPosts.setHasFixedSize(true)
         // recyclerPosts.adapter = mAdapter
@@ -30,16 +36,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun getPosts() {
 
-        mDataBase = FirebaseDatabase.getInstance().getReference("Posts")
+        mDataBase = FirebaseDatabase.getInstance().getReference("posts")
         mDataBase.addValueEventListener(object :ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-                if (snapshot.exists()){
-                    for (postSnapshot in snapshot.children){
-                        val post = postSnapshot.getValue(Post::class.java)
-                        postList.add(post!!)
-                    }
-                    recyclerPosts.adapter = mAdapter
+                val posts = snapshot.children.map {
+                    it.getValue<Post>()
                 }
+                mAdapter.refreshList(posts as ArrayList<Post>)
             }
 
             override fun onCancelled(error: DatabaseError) {

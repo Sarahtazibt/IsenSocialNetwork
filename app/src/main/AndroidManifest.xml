@@ -12,27 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IsenSocialNetwork"
         tools:targetApi="31">
-        <activity
-            android:name=".Load"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Uitel"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".PostAdapter"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
+
         <activity
             android:name=".CallActivity"
             android:exported="false">
@@ -40,9 +21,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".Adapter"
-            android:exported="false" />
+
         <activity
             android:name=".DetailActivity"
             android:exported="false">
@@ -56,9 +35,9 @@
         <activity
             android:name=".CreationActivity"
             android:exported="false"
-            android:parentActivityName=".Connexion_Activity" />
+            android:parentActivityName=".ConnexionActivity" />
         <activity
-            android:name=".Connexion_Activity"
+            android:name=".ConnexionActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

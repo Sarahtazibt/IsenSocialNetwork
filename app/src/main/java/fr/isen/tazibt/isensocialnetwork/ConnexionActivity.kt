@@ -7,7 +7,7 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import fr.isen.tazibt.isensocialnetwork.databinding.ActivityConnexionBinding
 
-class Connexion_Activity : AppCompatActivity() {
+class ConnexionActivity : AppCompatActivity() {
     private lateinit var binding: ActivityConnexionBinding
     private lateinit var firebaseAuth: FirebaseAuth
 

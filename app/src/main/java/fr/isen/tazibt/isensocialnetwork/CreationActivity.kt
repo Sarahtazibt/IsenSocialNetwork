@@ -21,7 +21,7 @@ class CreationActivity : AppCompatActivity() {
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.connect.setOnClickListener {
-            val intent = Intent(this, Connexion_Activity::class.java)
+            val intent = Intent(this, ConnexionActivity::class.java)
             startActivity(intent)
         }
         binding.button.setOnClickListener {
@@ -34,7 +34,7 @@ class CreationActivity : AppCompatActivity() {
 
                     firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener {
                         if (it.isSuccessful) {
-                            val intent = Intent(this, Connexion_Activity::class.java)
+                            val intent = Intent(this, ConnexionActivity::class.java)
                             startActivity(intent)
                         } else {
                             Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
