@@ -5,9 +5,6 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_post_adapter.*
-import fr.isen.tazibt.isensocialnetwork.R
-import fr.isen.tazibt.isensocialnetwork.uitel.getProgressDrawable
-import fr.isen.tazibt.isensocialnetwork.uitel.loadImage
 import kotlinx.android.synthetic.main.activity_call.*
 
 class CallActivity : AppCompatActivity() {
@@ -36,7 +33,7 @@ class CallActivity : AppCompatActivity() {
         carColor.text = postColor
         carModel.text = postModel
         carHorsepower.text = postHorsepower
-        carImg.loadImage(postImg, getProgessDrawable(this))
+        carImg.loadImage(postImg, getProgressDrawable(this))
     }
     /**ok now run it */
 }

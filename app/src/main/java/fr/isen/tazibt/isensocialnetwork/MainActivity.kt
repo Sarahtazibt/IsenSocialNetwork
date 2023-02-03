@@ -1,19 +1,10 @@
 package fr.isen.tazibt.isensocialnetwork
 
-import android.content.ContentValues
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.Toast
-import com.google.firebase.database.*
-import com.google.firebase.database.ktx.database
-import com.google.firebase.database.ktx.getValue
-import com.google.firebase.ktx.Firebase
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.gms.ads.mediation.Adapter
-import fr.isen.tazibt.isensocialnetwork.PostAdapter
-import fr.isen.tazibt.isensocialnetwork.Post
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 
