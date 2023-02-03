@@ -8,5 +8,8 @@ class Post(
     val carBrand: String? = "",
     val carColor: String? = "",
     val carModel: String? = "",
-    val carHorsepower: String? = ""
-) : java.io.Serializable
+    val carHorsepower: String? = "",
+    val Commentaire: String?=""
+) : java.io.Serializable {
+
+}

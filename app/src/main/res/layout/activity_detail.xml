@@ -10,6 +10,7 @@
         android:id="@+id/detailcar"
         android:layout_width="412dp"
         android:layout_height="570dp"
+        android:background="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

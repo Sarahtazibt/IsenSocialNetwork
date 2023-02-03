@@ -18,6 +18,8 @@ class PostAdapter(
         val postImg = view.findViewById<ImageView>(R.id.postImg)
         val postBrand = view.findViewById<TextView>(R.id.postBrand)
         val postColor = view.findViewById<TextView>(R.id.postColor)
+        val postComment = view.findViewById<TextView>(R.id.postComment)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
@@ -31,6 +33,7 @@ class PostAdapter(
         val post = postList[position]
         holder.postBrand.text = post.carBrand
         holder.postColor.text = post.carColor
+        holder.postComment.text =post.Commentaire
 
         val firstImage = post.carImg ?: ""
         if (firstImage.isNotEmpty()){
@@ -47,5 +50,6 @@ class PostAdapter(
         postList = newPosts
         notifyDataSetChanged()
     }
+
 
 }
