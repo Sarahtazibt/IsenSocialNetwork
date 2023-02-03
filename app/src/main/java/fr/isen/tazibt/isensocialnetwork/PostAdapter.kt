@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import fr.isen.tazibt.isensocialnetwork.R
-import fr.isen.tazibt.isensocialnetwork.databinding.ActivityAdapterBinding
+import fr.isen.tazibt.isensocialnetwork.databinding.ActivityPostAdapterBinding
 import fr.isen.tazibt.isensocialnetwork.Post
 import fr.isen.tazibt.isensocialnetwork.CallActivity
 
@@ -17,12 +17,12 @@ class PostAdapter(
     var c:Context,var postList:ArrayList<Post>
 ):RecyclerView.Adapter<PostAdapter.PostViewHolder>()
 {
-    inner class PostViewHolder(var v:ActivityAdapterBinding): RecyclerView.ViewHolder(v.root){}
+    inner class PostViewHolder(var v:ActivityPostAdapterBinding): RecyclerView.ViewHolder(v.root){}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
         val inflter = LayoutInflater.from(parent.context)
-        val v = DataBindingUtil.inflate<ActivityAdapterBinding>(
-            inflter, R.layout.activity_adapter,parent,
+        val v = DataBindingUtil.inflate<ActivityPostAdapterBinding>(
+            inflter, R.layout.activity_post_adapter,parent,
             false)
         return PostViewHolder(v)
 

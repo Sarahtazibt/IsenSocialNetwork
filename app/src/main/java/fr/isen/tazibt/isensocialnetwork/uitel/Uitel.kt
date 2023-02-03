@@ -8,7 +8,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import fr.isen.tazibt.isensocialnetwork.R
 
-fun getProgessDrawable(c:Context): CircularProgressDrawable {
+fun getProgressDrawable(c:Context): CircularProgressDrawable {
     return CircularProgressDrawable(c).apply {
         strokeWidth = 5f
         centerRadius = 40f
@@ -18,9 +18,9 @@ fun getProgessDrawable(c:Context): CircularProgressDrawable {
 }
 
 /**set Images*/
-fun ImageView.loadImage(uri:String?,progressDawable:CircularProgressDrawable){
+fun ImageView.loadImage(uri:String?,progressDrawable:CircularProgressDrawable){
 
-    val option = RequestOptions().placeholder(progressDawable)
+    val option = RequestOptions().placeholder(progressDrawable)
         .error(R.mipmap.ic_launcher)
 
     Glide.with(context)
@@ -32,6 +32,6 @@ fun ImageView.loadImage(uri:String?,progressDawable:CircularProgressDrawable){
 
 @BindingAdapter("android:imageUrl")
 fun loadImage(view:ImageView,url:String){
-    view.loadImage(url, getProgessDrawable(view.context))
+    view.loadImage(url, getProgressDrawable(view.context))
 }
 
