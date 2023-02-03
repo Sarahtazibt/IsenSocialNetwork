@@ -7,39 +7,33 @@
 
     <ImageView
         android:id="@+id/postImg"
-        android:layout_width="208dp"
-        android:layout_height="271dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="348dp"
+        android:layout_height="472dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/postBrand"
-        android:layout_width="178dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/postImg"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postImg" />
 
     <TextView
         android:id="@+id/postColor"
-        android:layout_width="178dp"
-        android:layout_height="59dp"
-        android:layout_marginBottom="52dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toEndOf="@+id/postImg"
-        app:layout_constraintTop_toBottomOf="@+id/postBrand"
-        app:layout_constraintVertical_bias="0.536" />
+        app:layout_constraintStart_toEndOf="@+id/postBrand"
+        app:layout_constraintTop_toBottomOf="@+id/postImg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

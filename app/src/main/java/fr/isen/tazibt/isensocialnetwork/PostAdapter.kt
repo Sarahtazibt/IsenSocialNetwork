@@ -32,11 +32,10 @@ class PostAdapter(
         holder.postBrand.text = post.carBrand
         holder.postColor.text = post.carColor
 
-        val firstImage = post.carImg[0]
+        val firstImage = post.carImg ?: ""
         if (firstImage.isNotEmpty()){
             Picasso.get().load(firstImage).into(holder.postImg)
         }
-        holder.postBrand.text
 
     }
 
