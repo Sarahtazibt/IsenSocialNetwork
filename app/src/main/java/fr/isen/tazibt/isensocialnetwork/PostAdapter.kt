@@ -39,7 +39,8 @@ class PostAdapter(
         if (firstImage.isNotEmpty()){
             Picasso.get().load(firstImage).into(holder.postImg)
         }
-
+        onClickListener
+        holder.postBrand.text
     }
 
     override fun getItemCount(): Int {

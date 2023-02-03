@@ -8,12 +8,9 @@ import com.squareup.picasso.Picasso
 import fr.isen.tazibt.isensocialnetwork.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityDetailBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDetailBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-
+        setContentView(R.layout.activity_detail)
+        val items = intent.getSerializableExtra("posts") as Post
     }
 }
